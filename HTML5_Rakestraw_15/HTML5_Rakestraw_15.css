@@ -1,0 +1,38 @@
+#allContent{
+	width: 90%;
+	background-color: #eee;
+	margin: auto;
+}
+			
+.column{
+	float: left;
+	width: 30%
+	display: inline;
+}
+
+
+h1, h2{
+	text-align: center;
+}
+
+footer{
+	float: none;
+	clear: both;
+}
+
+
+/*
+#colA{
+	float: left;
+	width: 30%
+}
+
+#colB{
+	float: left;
+	width: 30%
+}
+
+#colC{
+	float: left;
+	width: 30%
+}*/
