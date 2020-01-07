@@ -1,0 +1,20 @@
+#container{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+footer {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: flex-end;
+
+   /*  position:absolute;
+    bottom:0;
+    width:100%;  *//* it was the "width:100%" that made the formatting finally work; 
+                   before the footer was squished to the bottom/left */
+}
+
+
+img{
+    width: 200px;
+}
