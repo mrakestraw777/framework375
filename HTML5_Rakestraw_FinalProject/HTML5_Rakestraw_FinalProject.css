@@ -1,20 +1,64 @@
 #container{
     display: flex;
     flex-wrap: wrap;
-}
-
-footer {
-    display: flex;
     justify-content: space-evenly;
-    align-items: flex-end;
-
-   /*  position:absolute;
-    bottom:0;
-    width:100%;  *//* it was the "width:100%" that made the formatting finally work; 
-                   before the footer was squished to the bottom/left */
+    background-color: #E5E5EC;
 }
 
+#mainHeader{
+    background-color: black;
+    color: white;
+    margin: 0px;
+    text-align: center;
+    font-size: 5em;
+    font-family: 'Courier New', Courier, monospace;
+    padding: 10px 0px 20px 0px;
+}
+
+#privacyContent{
+    margin: 18px;
+}
+
+
+
+.description{
+    max-width: 150px;
+    height: 50px;
+}
+
+.shirtDiv{
+    margin: 30px;
+    display: flex;
+    flex-direction: column;
+}
+
+
+
+
+address{
+    display: inline;
+}
+
+footer{
+
+    background-color: bisque;
+}
 
 img{
-    width: 200px;
+    min-width: 150px;
+    min-height: 175px;
+    max-width: 300px;
+    max-height: 350px;
+}
+
+input{
+    max-width: 60px;
+}
+
+label{
+    margin-right: .5rem;
+}
+            
+span{
+    margin: 0px 1px 10px 10px;
 }
