@@ -1,0 +1,24 @@
+h1 {
+	font-family: quicksand;
+	color: #293538;
+	font-size: 2em;
+}
+
+article {
+	line-height: 2em;
+}
+
+img{
+	margin-right: 15px;
+	float: left;
+	max-width: 30%;
+}
+
+p {
+	font-family: Arial, Helvetica, sans-serif;
+}
+
+span{
+	font-style: italic;
+	margin-left: 5px;
+}
