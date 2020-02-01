@@ -1,0 +1,31 @@
+/* Lithuanian Flag */
+.lithuanian{
+    width: 400px;
+    height: 80px;
+}
+
+#topLithuanian{
+    background-color: yellow;
+}
+#middleLithuanian{
+    background-color: green;
+}
+#bottomLithuanian{
+    background-color: red;
+}
+
+/* Romanian Flag */
+
+#romanianFlag{
+    width: 133px;
+    height: 240px;
+    background-color: yellow;
+    margin-top: 100px;
+    margin-left: 50px;
+    border-left: 133px solid blue;
+    border-right: 133px solid red;
+}
+
+p{
+    font-size: 1.2em;
+}
