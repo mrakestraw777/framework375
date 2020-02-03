@@ -1,11 +1,15 @@
 form{
-    margin: 2% 1%;
+    margin: 1% 1%;
+    width: 85%;
+    max-width: 800px;
+    border: 2px solid rgb(209, 206, 206);
+    padding: 15px;
 }
 
 #buttonDiv{
     margin-left: 2%;
 }
 
-#mainForm{
-    max-width: 800px;
+h3{
+    margin-left: 1%;
 }
