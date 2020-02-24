@@ -1,0 +1,77 @@
+#mainDiv{
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    justify-content: space-around;
+}
+
+#firstPicture{
+    opacity: .4;
+}
+
+#firstPicture:hover{
+    opacity: 1;
+    /* width: 298px; */
+    /* height: auto; */
+    transform: rotate(360deg);
+    transition-duration: 2s;
+}
+
+#grinch_heart:active{
+    left: 50%;
+	top: 50%;
+	margin-top: -250px;
+	margin-left: -250px;
+	position: fixed;
+
+    transform: scale(3) /* translate(-50%, -50%) */ /* translate(60px, 68px) */;
+
+
+
+    /* position: absolute;
+    top: 50%; */
+}
+
+h1{
+    font-size: 2.5em;
+    text-align: center;
+    transition-delay: 3s;
+    transform: skew(45deg, 0deg);
+    transition-duration: 2s;
+    height: 45px;
+    margin-top: 22px;
+    margin-bottom: 22px;
+}
+
+h1:hover{
+    transition-delay: 0s;
+    transform: skew(-45deg, 5deg);
+    transition-duration: .5s;
+}
+
+h3{
+    text-align: center;
+    max-width: 200px;
+    /* height: 50px; */
+}
+
+img{
+    width: 100%;
+    /* height: auto; */
+    max-width: 250px;
+}
+
+#otherside{
+    transform: translate(-270%, 120%);
+    transition-delay: 5s;
+    transition-duration: 4s;
+}
+
+section{
+    width: 275px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    
+}
+
