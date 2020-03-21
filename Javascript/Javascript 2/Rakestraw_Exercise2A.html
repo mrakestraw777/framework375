@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lab #2A</title>
+</head>
+<body>
+
+    <div id="out"></div>
+    <script>
+    name1 = "Tom";
+    name2 = "Bob";
+    name3 = "Mary";
+    name4 = "Caitlyn";
+    name5 = "Red";
+    name6 = "Douglas";
+    name7 = "Judy";
+    name8 = "Susan";
+
+    var userChoice = prompt("Please choose a symbol (e.g. @, $, %, b, etc.)");
+    var separator = " " + userChoice + " ";
+    var list = name1 + separator + name2 + separator + name3 + separator + name4 + separator +
+               name5 + separator + name6 + separator + name7 + separator + name8;
+
+    document.getElementById('out').innerHTML = list;
+
+    
+    </script>
+    
+</body>
+</html>

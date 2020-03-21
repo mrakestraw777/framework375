@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lab #2B</title>
+</head>
+<body>
+    <div id="printFirst"></div>
+    <div id="printSecond"></div>
+    <div id="printThird"></div>
+    <div id="printFourth"></div>
+    <div id="printFifth"></div>
+
+    <script>
+
+        var userNum = parseFloat(prompt("Please enter a number (decimals allowed):  "));
+        var userPrintNum = "The number you entered is " + userNum ;
+        var plusTen = "Your number plus 10 is " + (userNum + 10);
+        var plusTwenty = "Your number plus 20 is " + (userNum + 20);
+        var plusFifty = "Your number plus 50 is " + (userNum + 50);
+        var plusUltra = "Your number plus 1568 is " + (userNum + 1568);
+
+        document.getElementById('printFirst').innerHTML = userPrintNum;
+        document.getElementById('printSecond').innerHTML = plusTen;
+        document.getElementById('printThird').innerHTML = plusTwenty;
+        document.getElementById('printFourth').innerHTML = plusFifty;
+        document.getElementById('printFifth').innerHTML = plusUltra;
+
+
+
+    </script>
+
+    
+</body>
+</html>
