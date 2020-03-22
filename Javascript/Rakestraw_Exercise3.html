@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lab #3</title>
+</head>
+<body>
+
+    <div id="sum"></div>
+    <div id="difference"></div>
+    <div id="multiply"></div>
+    <div id="isEqual"></div>
+    <div id="isLess"></div>
+    <div id="isDivisible"></div>
+
+    <script>
+        var operand1 = parseFloat(prompt("Give me random number:  "));
+        var operand2 = parseFloat(prompt("Give me a second random number:  "));
+
+        var sum = operand1 + operand2;
+        var difference = operand1 - operand2;
+        var multiply = operand1 * operand2;
+        var isEqual = operand1 == operand2;
+        var isLess = operand1 < operand2;
+        var isDivisible = (operand1 % operand2) == 0;
+    
+        
+
+        document.getElementById('sum').innerHTML = operand1 + " + " + operand2 + " = " + sum;
+        document.getElementById('difference').innerHTML = operand1 + " - " + operand2 + " = " + difference;
+        document.getElementById('multiply').innerHTML = operand1 + " * " + operand2 + " = " + multiply;
+        document.getElementById('isEqual').innerHTML = "Is " + operand1 + " equal to " + operand2 + ": " + isEqual;
+        document.getElementById('isLess').innerHTML = "Is " + operand1 + " less than " + operand2 + ": " + isLess;
+        document.getElementById('isDivisible').innerHTML = "Is " + operand1 + " evenly divisible by " + operand2 + ": " + isDivisible;
+
+
+    </script>
+
+    
+</body>
+</html>
