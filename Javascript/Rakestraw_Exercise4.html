@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lab #4</title>
+
+    <style>
+
+        #output{
+            font-size: 3em;
+        }
+    </style>
+</head>
+<body>
+    <div id="output"></div>
+
+    <script>
+
+        var firstNum = parseFloat(prompt("Enter a number: "));
+        var secondNum = parseFloat(prompt("Enter another number: "));
+        var operand = prompt("Enter an operator (+ , - , * , / , %): ");
+
+        if (operand == "+"){
+            var calc = firstNum + " " + operand + " " + secondNum + " is " + (firstNum + secondNum);
+        }
+        else if (operand == "-"){
+            var calc = firstNum + " " + operand + " " + secondNum + " is " + (firstNum - secondNum);
+        }
+        else if (operand == "*"){
+            var calc = firstNum + " " + operand + " " + secondNum + " is " + (firstNum * secondNum);
+        }
+        else if (operand == "/"){
+            var calc = firstNum + " " + operand + " " + secondNum + " is " + (firstNum / secondNum);
+        }
+        else if (operand == "%"){
+            var calc = "The remainder after dividing " + secondNum + " into " + firstNum + " is " + (firstNum%secondNum);
+        }
+        else{
+            var calc = operand + "'s not a valid operand.";
+        }
+
+        document.getElementById("output").innerHTML = calc;
+    </script>
+    
+</body>
+</html>
