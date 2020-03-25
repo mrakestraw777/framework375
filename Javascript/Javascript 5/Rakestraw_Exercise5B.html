@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lab #5B</title>
+</head>
+<body>
+
+    <div id="output"></div>
+    
+    <script>
+
+        var userRow = parseInt(prompt('Please enter a number for how many rows you want: '));
+        var userCol = parseInt(prompt('Please enter a number for how many columns you want: '));
+
+        var rowPattern = "";
+        for (let x = 0; x < userCol; x++) {
+            rowPattern += "*"; 
+        }
+
+        var newRow = rowPattern + "</br>";
+        var fullPattern = "";
+
+        for (let x = 0; x < userRow; x++){
+            fullPattern += newRow;
+        }
+
+        document.getElementById('output').innerHTML = fullPattern;
+
+        
+
+    </script>
+</body>
+</html>
+
+<!-- 
+
+    Section B: Prompt the user for a number of rows and a number of columns. 
+    Using the * output the * character in the row and column pattern requested by the user. 
+    If the user requests 2 rows and 2 columns you should output:
+
+        **
+        **
+
+ -->

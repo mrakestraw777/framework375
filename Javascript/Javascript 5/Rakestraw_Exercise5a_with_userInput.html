@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lab #5A</title>
+</head>
+<body>
+
+    <div id="output1"></div>
+    <div id="output2"></div>
+    
+    <script>
+
+        var userNumOne = parseInt(prompt('Enter a number (whole numbers only!!)'));
+        var output1 = "";
+        
+        for (let x = 0; x < (userNumOne+1); x++) {
+
+            if(userNumOne%2 === 1){
+
+                output1 = output1;
+                if(x < ((userNumOne/2)+1)){
+                    var starAdd = "";
+                    for (let y = x; y >= 0; y--) {
+                        starAdd += "*";
+                    };
+                    output1 += starAdd + "</br>";
+
+                }else{
+                    var starAdd = "";
+                    for (let y = x-(userNumOne+2); y <= 0; y++) {
+                        starAdd += "*"; 
+                        };
+                        output1 += starAdd + "</br>";
+                };
+
+
+            } //if user number is odd
+
+            else{
+                output1 = output1;
+                    if(x < 11){
+                        var starAdd = "";
+                        for (let y = x; y >= 0; y--) {
+                            starAdd += "*";
+                        };
+                        output1 += starAdd + "</br>";
+    
+                    }else{
+                        var starAdd = "";
+                        for (let y = x-(userNumOne+2); y <= 0; y++) {
+                            starAdd += "*"; 
+                            };
+                            output1 += starAdd + "</br>";
+                    };
+                }
+
+
+            } //if user number is even
+
+        document.getElementById('output1').innerHTML = output1;
+
+
+    </script>
+
+</body>
+</html>
+
+<!-- 
+    
+    
+    *
+    **
+    ***
+    ****
+    *****
+    ******
+    *******
+    ********
+    *********
+    **********
+    *********
+    ********
+    *******
+    ******
+    *****
+    ****
+    ***
+    **
+    *
+    
+    *-*-*-*-*-*-
+    *-*-*-*-*-*-
+    *-*-*-*-*-*-
+    *-*-*-*-*-*-
+    
+    
+-->

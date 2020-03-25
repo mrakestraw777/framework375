@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lab #5A</title>
+</head>
+<body>
+
+    <div id="output1"></div>
+    <div id="output2"></div>
+    
+    <script>
+
+        
+        var output1 = "";
+        
+        for (let x = 0; x < 22; x++) {
+
+                output1 = output1;
+
+                if(x < 11){
+                    var starAdd = "";
+                    for (let y = x; y >= 0; y--) {
+                        starAdd += "*";
+                    };
+                    output1 += starAdd + "</br>";
+                } //IF
+                
+                else{
+                    var starAdd = "";
+                    for (let y = x-20; y <= 0; y++) {
+                        starAdd += "*"; 
+                        };
+                        output1 += starAdd + "</br>";
+                }; //ELSE
+
+            }; //main FOR loop
+
+
+        document.getElementById('output1').innerHTML = output1;
+
+        var output2 = "";
+
+        for (let x = 0; x < 4; x++) {
+            output2 += "*-*-*-*-*-*-</br>";
+        }
+
+        document.getElementById('output2').innerHTML = output2;
+
+
+    </script>
+
+</body>
+</html>
+
+<!-- 
+    
+    
+    *
+    **
+    ***
+    ****
+    *****
+    ******
+    *******
+    ********
+    *********
+    **********
+    *********
+    ********
+    *******
+    ******
+    *****
+    ****
+    ***
+    **
+    *
+    
+    *-*-*-*-*-*-
+    *-*-*-*-*-*-
+    *-*-*-*-*-*-
+    *-*-*-*-*-*-
+    
+    
+-->
