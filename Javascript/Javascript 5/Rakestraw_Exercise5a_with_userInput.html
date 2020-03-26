@@ -8,39 +8,42 @@
 <body>
 
     <div id="output1"></div>
-    <div id="output2"></div>
     
     <script>
 
         var userNumOne = parseInt(prompt('Enter a number (whole numbers only!!)'));
         var output1 = "";
         
-        for (let x = 0; x < (userNumOne+1); x++) {
+        for (let x = 0; x < ((userNumOne*2)-1); x++) { // initializes how many rows and assigns to "x. "2" is substracted 
+                                                       // because counter begins at '0' and I need 1 less than double the user#
+                                                       // to have the right number of rows; so "-2"
 
-            if(userNumOne%2 === 1){
+            if(userNumOne%2 === 1){ //if modulus has 1 remaining then the # is odd
 
                 output1 = output1;
-                if(x < ((userNumOne/2)+1)){
+
+                if(x < userNumOne){
                     var starAdd = "";
                     for (let y = x; y >= 0; y--) {
                         starAdd += "*";
                     };
                     output1 += starAdd + "</br>";
 
-                }else{
+                } // IF odd INNER IF
+                else{
                     var starAdd = "";
-                    for (let y = x-(userNumOne+2); y <= 0; y++) {
+                    for (let y = x - ((userNumOne*2)-1); y < 0; y++) {
                         starAdd += "*"; 
                         };
                         output1 += starAdd + "</br>";
-                };
+                }; //ELSE odd inner
 
 
-            } //if user number is odd
+            } //IF user number is odd MAIN
 
             else{
                 output1 = output1;
-                    if(x < 11){
+                    if(x < userNumOne){
                         var starAdd = "";
                         for (let y = x; y >= 0; y--) {
                             starAdd += "*";
@@ -49,15 +52,15 @@
     
                     }else{
                         var starAdd = "";
-                        for (let y = x-(userNumOne+2); y <= 0; y++) {
+                        for (let y = x-((userNumOne*2)-2); y <= 0; y++) {
                             starAdd += "*"; 
                             };
                             output1 += starAdd + "</br>";
-                    };
-                }
+                    }; //ELSE even inner
+                } //ELSE user number is even
 
 
-            } //if user number is even
+            } //FOR main
 
         document.getElementById('output1').innerHTML = output1;
 
