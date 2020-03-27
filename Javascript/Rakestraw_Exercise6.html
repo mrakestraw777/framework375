@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lab #6</title>
+</head>
+<body>
+
+    <div id="largestToSmallest"></div>
+    <div id="average"></div>
+    <div id="bestAndWorst"></div>
+    <div id="outstanding"></div>
+
+    <script>
+        //GET THE SCORES
+        var names = []; //["3.9", "2.8", "1.7", "3.7", "4.0", "1.6", "2.9", "4.1"];
+        var theName = "";
+        while (theName != "XXX")
+        {
+            theName = prompt("Enter a name or XXX to Stop");
+            if(theName != "XXX"){
+                names.push(theName);
+            }
+        }
+        for(var x = 0; x < names.length; x++)
+        {
+            alert(names[x]);
+        }
+
+        
+        // SORTING THE GPAs
+        names = names.sort();
+
+        //NEW REFACTORED CODE
+        var greatestToLeast = [];
+        var totalGPA = 0;
+        var outstandingCounter = 0;
+        var outstandingGPAs = [];
+        
+        var bestGPA = names[names.length-1];
+        var worstGPA = names[0];
+
+        for (let x = names.length-1; x >= 0; x--) {
+                
+                if(names[x] >= "3.4"){
+                    outstandingCounter += 1;
+                    outstandingGPAs.push(" " + names[x]);
+                    greatestToLeast.push(" " + names[x]);
+                    totalGPA += parseFloat(names[x]);
+                }else{
+                    greatestToLeast.push(" " + names[x]);
+                    totalGPA += parseFloat(names[x]);
+                };
+            
+        };
+
+        var averageGPA = (totalGPA/names.length).toPrecision(3);
+
+        document.getElementById('largestToSmallest').innerHTML = "The GPAs (from greatest to least) are: " + greatestToLeast;
+        document.getElementById('average').innerHTML = "The average score of the GPAs is " + averageGPA;
+        document.getElementById('bestAndWorst').innerHTML = "The best GPA is " + bestGPA + " and the worst is " + worstGPA;
+        document.getElementById('outstanding').innerHTML =  "There are " + outstandingCounter + " outstanding GPAs: " + outstandingGPAs;
+
+
+        // GPAs FROM GREATEST TO LEAST
+        /* var greatestToLeastArr = [];
+        for (let x = names.length-1; x >= 0; x--) {
+            if(x != 0){
+                greatestToLeastArr.push(names[x] + );//+ ", ";
+            } else{
+                greatestToLeastArr += names[x];
+            }
+            
+        }
+        document.getElementById('largestToSmallest').innerHTML = "From Greatest to Least the GPAs are: " + greatestToLeastArr;
+        
+        //AVERAGE OF ALL GPAs
+        var totalGPA = 0;
+        for (let x = 0; x < names.length; x++) {
+            totalGPA += parseFloat(names[x]);
+            console.log("In the for loop: "+ totalGPA);
+        };
+        document.getElementById('average').innerHTML = "The average of all the GPAs is " + (totalGPA/names.length).toPrecision(3);
+        
+        //OUTSTANDING GPAs
+        var outstandingGPAs = [];
+        for (let x = names.length - 1; x >= 0 ; x--){
+            if(names[x] >= "3.4"){
+                outstandingGPAs += names[x] + ", ";
+            }
+        }
+        document.getElementById('outstanding').innerHTML = "The outstanding GPAs in the class are " + outstandingGPAs;
+
+
+        /* A) The GPA’s in order from largest to smallest.
+        B) The average of the GPA’s
+        C) The highest and lowest GPA for the class
+        D) A list of the outstanding GPA’s (Defined as GPA’s over 3.4). */
+    </script>
+    
+</body>
+</html>
