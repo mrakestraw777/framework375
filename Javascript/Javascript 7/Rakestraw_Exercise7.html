@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lab #7</title>
+
+    <script src="Player.js"></script>
+    <style>
+
+        table{
+            border: 1px solid black;
+        }
+        td, tr{
+            height: 25px;
+            width: 25px;
+            padding: 1px;
+            border-collapse: collapse;
+        }
+
+        td{
+            background-color: rgb(201, 190, 190);
+            margin: 1px;
+            
+        }
+        .currentLocation{
+            background-color: blue;
+        }
+
+    </style>
+</head>
+<body>
+
+    <div id="playerBoard"></div>
+
+    <script>
+        var moveAgain = "y";
+        var moveCounter = 0;
+        var player1 = new Player("player1");
+        alert("You're at " + (player1.gridLocationX+1) + ", " + (player1.gridLocationY+1));
+        while(moveAgain == "y"){
+                moveCounter += 1;
+                var currentMove = prompt("What's your move? (left, right, up, or down) ");
+                player1.newMove(currentMove);
+                // alert("You've moved to " + (player1.gridLocationX+1) + ", " + (player1.gridLocationY+1));
+                console.log("Current Grid Location is " + (player1.gridLocationX+1) + ", " + (player1.gridLocationY+1));
+                moveAgain = prompt("Move again? ('y' or 'n')");
+                document.getElementById('playerBoard').innerHTML = player1.printBoard();
+        };// WHILE LOOP
+
+
+        
+    </script>
+
+
+</body>
+</html>
+
+
+
+
+<!-- /* var player1 = new Player("player1");
+alert(player1.name);
+alert(player1.gridLocationY);
+var board = player1.printBoard();
+// console.log(board);
+document.getElementById('playerBoard').innerHTML = board;
+player1.moveRight();
+document.getElementById('playerBoard').innerHTML = player1.printBoard(); */
+/* var next = "";
+var moveCounter = 0;
+while(next != "end"){
+    if (moveCounter === 0){
+        var player1 = new Player(prompt("What's your name? "));
+        console.log(player1.name);
+        console.log(player1);
+        // document.getElementById('playerBoard').innerHTML = player1.printBoard();
+        next == "end";
+        moveCounter += 1;
+        
+    }else{
+        
+    }
+    
+} */ -->
