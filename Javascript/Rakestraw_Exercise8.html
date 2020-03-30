@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lab #8</title>
+</head>
+<body>
+
+    <div id="output"></div>
+
+    <script>
+        
+        function showResult(array){
+            let output = '';
+
+            for(let x = 0; x < 3; x++){
+                if(x == 0){
+                    array.push(parseFloat(prompt("Enter a number (decimals accepted):  ")));
+                }
+                else if(x == 1){
+                    array.push(parseFloat(prompt("Enter another number (decimals accepted):  ")));
+                }else{
+                    array.push(prompt("Enter an operator (+, -, *, /, %:  "));
+                }
+            } // FOR loop
+
+            if(array[2] == "%"){
+                let modulus = array[0] % array[1];
+                output = "The remainder after dividing " + array[1] + " into " + array[0] + " is " + modulus;
+                // return output
+            }
+            else if(array[2] == "+"){
+                let result = array[0] + array[1];
+                output = array[0] + " " + array[2] + " " + array[1] + " = " + result;
+            }else if(array[2] == "-"){
+                let result = array[0] - array[1];
+                output = array[0] + " " + array[2] + " " + array[1] + " = " + result;
+            }else if(array[2] == "*"){
+                let result = array[0] * array[1];
+                output = array[0] + " " + array[2] + " " + array[1] + " = " + result;
+            }else if(array[2] == "/"){
+                let result = array[0] / array[1];
+                output = array[0] + " " + array[2] + " " + array[1] + " = " + result;
+            } // IF / ELSE
+            return output;
+
+            
+        }; //FUNCTION
+        let userArray = [];
+        document.getElementById('output').innerHTML = showResult(userArray);
+        console.log("userArray after function is " + userArray);
+        
+        
+        
+        
+    </script>
+    
+</body>
+</html>
