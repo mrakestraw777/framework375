@@ -1,6 +1,4 @@
-alert("The file is connect to Javascript 9!");
-
-// main function to generate To-do template
+// main function to generate To-do header
 let toDo = function(userArray){
     let output = "<h1>TO-DO</h1>";
     output += addToDo(userArray);
