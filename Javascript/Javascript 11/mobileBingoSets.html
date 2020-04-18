@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lab #11</title>
+    <style>
+
+
+
+#boardAndButtons{
+    display: flex;
+}
+
+button{
+    height: 60px;
+    max-width: 200px;
+    margin: 5px;
+    background-color: lightgray;
+    border-radius: 5px;
+}
+
+div#buttons{
+    margin-top: 17px;
+    margin-left: 20px;
+    display: flex;
+    flex-direction: column;
+    min-width: 250px;
+    align-self: flex-start;
+}
+#currentPiece{
+    display: inline-block;
+}
+.inPlay{
+    background-color: red;
+    color: white;
+}
+td{
+    border: 2px solid black;
+    width: 50px;
+    height: 30px;
+    text-align: center;
+    
+}
+
+    </style>
+</head>
+
+<body>
+            <div id="boardAndButtons">
+                
+                <div id="board"></div>
+                
+                <div id="buttons">
+
+                    <button id="printPiece" onclick="getElementById('board').innerHTML = printBingoBoard(numbers)">Print Board</button>
+            
+                    <button id="verify" onclick="getElementById('board').innerHTML = verifyBingoBoard(numbers)">Verify Bingo</button>
+            
+                    <div id="currentPiece"></div>
+
+                </div>
+                
+        
+            </div>
+
+
+            <script>
+
+let piecesInPlay = [];
+let counter = 0;
+
+// Prints out the Bingo board w/ classes for chosen pieces
+let verifyBingoBoard = function(setPieces){ 
+    if (counter == 1)
+    {
+        piecesInPlay = [];
+        return document.getElementById('board').innerHTML = printBingoBoard(setPieces);
+        
+        
+    }
+    else if (counter == 0)
+    {
+        let piecesArray = [...setPieces];
+        let firstRow = "<tr> <th>B</th> <th>I</th> <th>N</th> <th>G</th> <th>O</th> </tr>";
+        let numberRows = "";
+        for (let x = 0; x<15; x++)
+        {
+            let newRow = "";
+            for(let y = x; y<piecesArray.length; y+=15)
+            {
+                if (piecesInPlay.includes(piecesArray[y]))
+                {
+                    newRow += "<td class='inPlay'>" + piecesArray[y] + "</td>"
+                }
+                else 
+                {
+                    newRow += "<td>" + piecesArray[y] + "</td>";
+                }
+            };
+            numberRows += "<tr>" + newRow + "</tr>";
+        };
+        let bingBoard = "<table>" + firstRow + numberRows + "</table>";
+        document.getElementById('printPiece').value = "New Piece";
+        counter++;
+        
+        document.getElementById('verify').innerHTML = "Reset?";
+        return bingBoard;
+    }
+
+};
+
+let printBingoBoard = function(setPieces){
+    let piecesArray = [...setPieces];
+    let firstRow = "<tr> <th>B</th> <th>I</th> <th>N</th> <th>G</th> <th>O</th> </tr>";
+    let numberRows = "";
+    chooseBingoPiece(setPieces);
+    for (let x = 0; x<15; x++){
+        let newRow = "";
+        for(let y = x; y<piecesArray.length; y+=15)
+        {
+            newRow += "<td>" + piecesArray[y] + "</td>";
+        };
+        numberRows += "<tr>" + newRow + "</tr>";
+    };
+    let bingoBoard = "<table>" + firstRow + numberRows + "</table>";
+    document.getElementById('printPiece').innerHTML = "New Piece";
+    counter = 0;
+    document.getElementById('verify').innerHTML = "Verify Bingo"
+    return bingoBoard;
+}
+
+// Chooses a random game piece from the provided Set 
+let chooseBingoPiece = function(setPieces){
+    let piecesArray = [...setPieces];
+    let bingoPiece = piecesArray[Math.floor(Math.random() * piecesArray.length)]
+    // console.log(bingoPiece); #DELETE
+    // Push the random piece to piecesInPlay[] if not already in play
+    if (piecesInPlay.includes(bingoPiece))
+    {
+        console.log(bingoPiece + " has already been chosen.  Choosing again...");
+        chooseBingoPiece(setPieces);
+    }
+    else
+    {
+        piecesInPlay.push(bingoPiece);
+        console.log("Currently Selected piece:  " + bingoPiece);
+        document.getElementById('currentPiece').innerHTML = "<h1>Current Piece: " + bingoPiece + "</h1>";
+    }
+    // 
+    
+}
+
+let numbers = new Set()
+    .add("B1")
+    .add("B2")
+    .add("B3")
+    .add("B4")
+    .add("B5")
+    .add("B6")
+    .add("B7")
+    .add("B8")
+    .add("B9")
+    .add("B10")
+    .add("B11")
+    .add("B12")
+    .add("B13")
+    .add("B14")
+    .add("B15")
+    .add("I16")
+    .add("I17")
+    .add("I18")
+    .add("I19")
+    .add("I20")
+    .add("I21")
+    .add("I22")
+    .add("I23")
+    .add("I24")
+    .add("I25")
+    .add("I26")
+    .add("I27")
+    .add("I28")
+    .add("I29")
+    .add("I30")
+    .add("N31")
+    .add("N32")
+    .add("N33")
+    .add("N34")
+    .add("N35")
+    .add("N35")
+    .add("N36")
+    .add("N37")
+    .add("N38")
+    .add("N39")
+    .add("N40")
+    .add("N41")
+    .add("N42")
+    .add("N43")
+    .add("N44")
+    .add("N45")
+    .add("G46")
+    .add("G47")
+    .add("G48")
+    .add("G49")
+    .add("G50")
+    .add("G51")
+    .add("G52")
+    .add("G53")
+    .add("G54")
+    .add("G55")
+    .add("G56")
+    .add("G57")
+    .add("G58")
+    .add("G59")
+    .add("G60")
+    .add("O61")
+    .add("O62")
+    .add("O63")
+    .add("O64")
+    .add("O65")
+    .add("O66")
+    .add("O67")
+    .add("O68")
+    .add("O69")
+    .add("O70")
+    .add("O71")
+    .add("O72")
+    .add("O73")
+    .add("O74")
+    .add("O75")
+            </script>
+   
+</body>
+</html>
