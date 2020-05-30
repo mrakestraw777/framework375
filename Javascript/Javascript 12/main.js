@@ -1,5 +1,4 @@
 let madderLibs = function(){
-    // console.log("Function is working!!")
     let object = {};
     object.clothing = document.getElementById('clothing').value;
     object.bodyPart1 = document.getElementById('bodyPart1').value;
@@ -10,7 +9,7 @@ let madderLibs = function(){
     object.noun1 = document.getElementById('noun1').value;
     object.noun2 = document.getElementById('noun2').value;
     object.verb3 = document.getElementById('verb3').value;
-    // console.log(object)
+
     let output = `How to do The Floss Dance<br>
     <br>
     1 ) Put on some music  <br>
