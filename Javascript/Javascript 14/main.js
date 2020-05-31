@@ -114,16 +114,31 @@ And is heading at ${this._direction}°`);
         } else //if the engine as turned off
         {
             console.log(`The vehicle can't turn if the engine's off 
-            and the car's not in motion.
-            Try "turnOn()" then "accelerate()".`)
+and the car's not in motion.
+Try "turnOn()" then "accelerate()".`)
         }
     };
     turnRight()
     {
-        const rightTurn = -90;
-        this._direction = newDirection(this._direction, rightTurn);
-        console.log(`Vehicle has turned right. 
+        if (this._engineStarted)
+        { 
+            if (this._currentSpeed > 0) //if the vehicle is on AND is in motion
+            {
+
+                const rightTurn = -90;
+                this._direction = newDirection(this._direction, rightTurn);
+                console.log(`Vehicle has turned right. 
 And is heading at ${this._direction}°`);
+            } else //if the vehicle is on but NOT in motion
+            {
+                console.log("The vehicle must be in motion to turn.  Try 'accelerate()'.")
+            };
+        } else //if the engine as turned off
+        {
+            console.log(`The vehicle can't turn if the engine's off 
+and the car's not in motion.
+Try "turnOn()" then "accelerate()".`)
+        }
     };
 
 };
