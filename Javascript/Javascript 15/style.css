@@ -1,0 +1,12 @@
+body{
+    display: flex;
+}
+
+div{
+    max-width: 600px;
+    padding-left: 20px;
+}
+
+img{
+    max-width: inherit;
+}

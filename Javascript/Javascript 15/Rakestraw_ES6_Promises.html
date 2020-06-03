@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Promises</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div>
+        <form action="">
+            <h4>Please Enter the Height and Width for Your Image: </h3>
+            <label for="height">Height:  
+                <input id="height" type="number" value=0>
+            </label><br>
+
+            <label for="width">Width:  
+                <input id="width" type="number" value=0>
+            </label><br>
+            <label for="grayscale">Grayscale:
+                <input id="grayscale" type="checkbox" value="grayscale">
+            </label>
+        </form>
+
+        <button onclick="getPicture()">Click for your picture</button>
+    </div>
+    <div id="picDiv"></div>
+    
+    <script src="main.js"></script>
+</body>
+</html>
